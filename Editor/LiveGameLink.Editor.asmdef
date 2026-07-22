@@ -1,0 +1,17 @@
+{
+    "name": "LiveGameLink.Editor",
+    "rootNamespace": "LiveGameLink.Editor",
+    "references": [ "LiveGameLink.Runtime" ],
+    "includePlatforms": [ "Editor" ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        { "name": "com.twitch.sdk",    "expression": "", "define": "LGL_TWITCH_SDK" },
+        { "name": "com.twitchlib.unity","expression": "", "define": "LGL_TWITCHLIB" }
+    ],
+    "noEngineReferences": false
+}

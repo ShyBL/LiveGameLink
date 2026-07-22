@@ -1,0 +1,13 @@
+html, body { margin: 0; padding: 0; background: transparent; color: #fff; font-family: Inter, system-ui, sans-serif; }
+.lgl-overlay { position: fixed; inset: 0; pointer-events: none; }
+.lgl-overlay .lgl-el { pointer-events: auto; margin: 8px; padding: 8px 12px; background: rgba(15, 13, 28, 0.85); border-radius: 8px; }
+.lgl-overlay button { background: #9145ff; color: #fff; border: 0; padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+.lgl-label { display: block; font-size: 12px; opacity: 0.8; margin-bottom: 4px; }
+.lgl-bar { width: 200px; height: 8px; background: rgba(255,255,255,0.15); border-radius: 4px; overflow: hidden; }
+.lgl-bar__fill { height: 100%; background: #9145ff; transition: width 200ms ease; }
+.lgl-stat__value { font-weight: 700; }
+
+.lgl-toasts { position: fixed; right: 16px; bottom: 16px; display: flex; flex-direction: column-reverse; gap: 8px; max-width: 320px; pointer-events: none; }
+.lgl-toast { background: rgba(15,13,28,0.92); border-left: 4px solid #9145ff; padding: 10px 12px; border-radius: 6px; opacity: 1; transition: transform 200ms, opacity 200ms; }
+.lgl-toast--out     { opacity: 0; transform: translateY(10px); }
+.lgl-toast--dropped { opacity: 0.4; transform: scale(0.97); }

@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>LiveGameLink.CloudCode</RootNamespace>
+    <AssemblyName>TwitchBroadcast</AssemblyName>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- UGS Cloud Code SDK -->
+    <PackageReference Include="Unity.Services.CloudCode.Core"     Version="1.0.0" />
+    <PackageReference Include="Unity.Services.CloudCode.Apis"     Version="1.0.0" />
+    <PackageReference Include="Unity.Services.CloudSave.Apis"     Version="1.0.0" />
+
+    <!-- Twitch extension JWT signing + PubSub send -->
+    <PackageReference Include="TwitchLib.Extension" Version="1.0.6" />
+
+    <!-- Logging + JSON -->
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
+    <PackageReference Include="System.Text.Json" Version="9.0.0" />
+  </ItemGroup>
+</Project>

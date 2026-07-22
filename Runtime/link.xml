@@ -1,0 +1,8 @@
+<linker>
+  <assembly fullname="LiveGameLink.Runtime" preserve="all"/>
+  <assembly fullname="TwitchSDK" preserve="all"/>
+  <assembly fullname="TwitchLib.Unity" preserve="all"/>
+  <assembly fullname="Unity.Services.CloudCode" preserve="all"/>
+  <assembly fullname="Unity.Services.CloudSave" preserve="all"/>
+  <assembly fullname="Unity.Services.Authentication" preserve="all"/>
+</linker>

@@ -1,0 +1,5 @@
+{
+  "$comment": "Declared element manifest. Mirror of Schema.cs DeclaredElementIds in the Cloud Code module. Wizard rewrites this; do not hand-edit.",
+  "protocolVersion": "3.0.0",
+  "declaredElementIds": []
+}

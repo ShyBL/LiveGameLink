@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LiveGameLink v4 Protocol (UGS variant)",
+  "description": "Wire format between Unity game, UGS Cloud Code module, and Twitch extension. Identical to v3 protocol. Mirrored to Backend~/ugs-cloud-code/Schema.cs and Extension~/src/protocol.js.",
+  "version": "3.0.0",
+  "definitions": {
+    "Envelope": {
+      "type": "object",
+      "required": ["protocolVersion", "type", "ts"],
+      "properties": {
+        "protocolVersion": { "type": "string", "const": "3.0.0" },
+        "type":            { "type": "string" },
+        "ts":              { "type": "integer" }
+      }
+    },
+    "Broadcast": {
+      "allOf": [{ "$ref": "#/definitions/Envelope" }],
+      "properties": {
+        "type": { "enum": ["UI_MANIFEST", "STATE_PATCH", "TOAST", "CLEAR_UI"] },
+        "elements": { "type": "array", "maxItems": 64, "items": { "$ref": "#/definitions/UIElement" } },
+        "toast": { "type": "string", "maxLength": 200 }
+      }
+    },
+    "UIElement": {
+      "type": "object",
+      "required": ["id", "kind"],
+      "properties": {
+        "id":    { "type": "string", "maxLength": 64, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "kind":  { "enum": ["button", "progress", "stat", "toast"] },
+        "label": { "type": "string", "maxLength": 128 },
+        "value": { "type": "number" },
+        "min":   { "type": "number" },
+        "max":   { "type": "number" }
+      }
+    },
+    "ViewerAction": {
+      "allOf": [{ "$ref": "#/definitions/Envelope" }],
+      "properties": {
+        "type":      { "const": "VIEWER_ACTION" },
+        "action":    { "enum": ["button_click"] },
+        "elementId": { "type": "string", "maxLength": 64 },
+        "userId":    { "type": "string", "maxLength": 64 }
+      }
+    }
+  }
+}

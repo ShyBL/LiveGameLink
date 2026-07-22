@@ -1,0 +1,6 @@
+{
+  "name": "TwitchBroadcast",
+  "version": "1.0.0",
+  "description": "Live Game Link v4 backend module. Game-to-extension broadcast via Twitch PubSub; Cloud Save state persistence; declared-element policy enforcement.",
+  "language": "csharp"
+}

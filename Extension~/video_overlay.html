@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https://*.twitch.tv;
+                 script-src 'self' https://extension-files.twitch.tv;
+                 connect-src 'self' https://*.ext-twitch.tv wss://*.ext-twitch.tv https://cloud-code.services.api.unity.com https://services.api.unity.com;
+                 style-src 'self' 'unsafe-inline';
+                 img-src 'self' data: https:;
+                 frame-ancestors https://*.twitch.tv;">
+  <link rel="stylesheet" href="src/css/viewer.css"/>
+</head>
+<body>
+  <div id="lgl-root" class="lgl-overlay"></div>
+  <div id="lgl-toasts" class="lgl-toasts" aria-live="polite"></div>
+  <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
+  <script src="manifest.js"></script>
+  <script src="src/protocol.js"></script>
+  <script src="src/policy.js"></script>
+  <script src="src/ugs.js"></script>
+  <script src="src/viewer.js"></script>
+</body>
+</html>
