@@ -9,8 +9,8 @@
   "dependencies": {
     "com.unity.services.core":           "1.13.0",
     "com.unity.services.authentication": "3.4.0",
-    "com.unity.services.cloud-code":     "2.8.2",
-    "com.unity.services.cloud-save":     "3.2.1",
+    "com.unity.services.cloud-code":     "2.8.x",
+    "com.unity.services.cloud-save":     "3.2.x",
     "com.unity.nuget.newtonsoft-json":   "3.2.1",
     "com.unity.test-framework":          "1.4.5"
   },
